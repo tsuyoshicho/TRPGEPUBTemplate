@@ -1,0 +1,140 @@
+= リプレイサンプル(Asciidoc/推奨版)
+
+== タイトル 第一話
+
+=== キャラクター紹介
+
+キャラクターシート::
+  定義リスト xx{two-colons} yy を利用する +
+  説明
+
+キャラクターシート2枚目::
+  種族::: 人間
+  特徴::: なし
+
+=== ぼうけんのはじまり
+
+[role="dialog"]
+[name gm]#ＧＭ#
+[separator]#：#
+[gm phrase]#表示と記述のサンプルです、発言はここ。#
+
+[role="dialog"]
+[name pc1]#PC1さん#
+[separator]#：#
+[pc1 phrase]#asciidocでの記法は以下です。[role="dialog"]のブロックが最外郭になり、1つのセリフになります。#
+
+[role="dialog"]
+[name pc1]#PC1さん#
+[separator]#：#
+[pc1 phrase]#上記の中に以下が入ります。[name pcx]これが名前側。この後に+++#PC1さん#+++のように固有の名前の部分だけ指定します。#
+
+[role="dialog"]
+[name gm]#ＧＭ#
+[name]#/マスター#
+[separator]#：#
+[gm phrase]#「サブのキャラクターなどは、gm,pcXなどのクラスの対象外(nameだけ)にする。」#
+
+[role="dialog"]
+[name pc2]#PC2さん#
+[separator]#：#
+[pc1 phrase]#名前とセリフ部分の区切りには[separator]+++#：#+++などとしてください。#
+
+[role="dialog"]
+[name gm]#ＧＭ#
+[name]#/マスター#
+[separator]#：#
+[gm phrase]#「地の文は[role="body_text"]の直後からとしてくれ、通常段落に限らなくていいぞ。ただ、各ブロックの先頭で宣言は必要になるが。」#
+
+[role="body_text"]
+さて、マスターから依頼です。
+
+[role="body_text"]
+* 冒険者はいつもアレ。
+* 同行者はわりとソレ。
+
+=== 事件発生
+
+[role="dialog"]
+[name gm]#ＧＭ#
+[separator]#：#
+[gm phrase]#+++セリフ部分ですが<br />
+[gm phrase]<br />
+としてください。<br />
+<br />
+ここまでのをあわせて、サンプルとしてセリフ1つを記載すると<br />
+[role="dialog"]<br />
+[name gm]#ＧＭ#<br />
+[name]#/マスター#<br />
+[separator]#：#<br />
+[gm phrase]#「こんな感じだ。わかったか?」#<br />
+(次とは空行で1行開けること)<br />+++#
+
+[role="dialog"]
+[name pc1]#PC1さん#
+[separator]#：#
+[pc1 phrase]#セリフの改行は行末に \+とすればいいです。 +
+また、HTMLを入れたければ前後を(+)x3でくくってください。あと区切り<hr />は(''')です。#
+
+'''
+
+[role="dialog"]
+[name gm]#ＧＭ#
+[separator]#：#
+[gm phrase]#name(クラス)内のクラスおよびphraseに併記するクラスは、以下を作成しています。gm,pc1...x(追加は自由に),pcall(全員)#
+
+[role="dialog"]
+[name pcall]#一同#
+[separator]#：#
+[pcall phrase]#―――(爆笑)#
+
+[role="dialog"]
+[name pc1]#PC1さん#
+[separator]#：#
+[pc1 phrase]#だれかのセリフの続きの内容を地に記載する場合はクラス指定なしのpなどで実施します。#
+
+これで説明口調の記述をします。
+
+* 手間を減らすため指定なし。
+* 地の文のためにクラスが指定してあるのは、デザイン優先のため。
+
+ただ、記述をしっかり行うなら[role="dialog"]+++[pc1 phrase]++++++#...#+++と個別の枠を作ってもよいです。
+
+[role="dialog"]
+[name pc3]#???#
+[separator]#：#
+[pc3 phrase]#H1(==)はタイトルとしていますが、H2(===)-H5(======)については文章に沿った定義でかまいません。
+(H1を含め明確な定義はありません)#
+
+==== Ａ－２ 森の中
+
+===== ＶＳモンスター
+
+====== ラウンド１
+
+[role="dialog"]
+[name user1]#1さん#
+[separator]#：#
+[user1 phrase]#実際のキャラ名がきまったら、CSS(Sacss/SCSS)の定義とすりあわせておくと明確になります#
+
+[role="dialog"]
+[name user2]#2さん#
+[separator]#：#
+[user2 phrase]#あわせてアイコンとか用意するとよいでしょう#
+
+[role="body_text"]
+―――これにて終了
+
+'''
+
+== ライセンス
+
+[NOTE]
+====
+Sample HTML Create by Tsuyoshi CHO <Tsuyoshi.CHO@Gmail.com>
+
+It is licensed under the CC BY-SA 4.0 http://creativecommons.org/licenses/by-sa/4.0/deed
+{% creativecommons type="by-sa", iconOnly="true" %}
+{% endcreativecommons %}
+====
+

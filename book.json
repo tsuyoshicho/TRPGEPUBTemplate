@@ -1,0 +1,47 @@
+{
+  "title": "TRPG EPUB Template",
+  "description": "TRPG EPUB Template",
+  "author": "TRPG EPUB Template Team/CC SA-BY 4.0",
+  "language": "ja",
+  "plugins": [
+    "creativecommons",
+    "styles-sass-fix",
+    "autocover",
+    "disqus",
+    "puml"
+  ],
+  "pluginsConfig": {
+    "autocover": {
+      "title": "TRPG EPUB Template",
+      "author": "TRPG EPUB Template Team/CC SA-BY 4.0"
+    },
+    "disqus": {
+      "shortName": "tsuyoshi-cho-gitbook"
+    },
+    "fontsettings": {
+      "theme": "sepia",
+      "family": "serif",
+      "size": 2
+    }
+  },
+  "styles": {
+    "website": "./styles/website.scss",
+    "ebook": "./styles/ebook.scss",
+    "pdf": "./styles/pdf.scss"
+  },
+  "pdf": {
+    "pageNumbers": true,
+    "fontFamily": "IPAMincho",
+    "fontSize": 9,
+    "paperSize": "a6",
+    "margin": {
+      "top": 26,
+      "bottom": 8,
+      "right": 8,
+      "left": 8
+    }
+  },
+  "variables": {
+    "note": "ノート"
+  }
+}

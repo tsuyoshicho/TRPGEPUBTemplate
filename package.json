@@ -1,0 +1,31 @@
+{
+  "name": "TRPGEPUBTemplate",
+  "version": "1.0.0",
+  "description": "TRPG EPUB Template",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" ",
+    "lint": "textlint SUMMARY.md GLOSSARY.md doc/*",
+    "lint-gh": "textlint --format checkstyle SUMMARY.md GLOSSARY.md doc/*",
+    "start": "gitbook serve",
+    "install": "gitbook install",
+    "build": "gitbook build && rm -rf docs && cp -r _book docs",
+    "pdf": "gitbook pdf . output.pdf",
+    "epub": "gitbook epub . output.epub"
+  },
+  "author": "Tsuyoshi CHO <Tsuyoshi.CHO@Gmail.com>",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2",
+    "svgexport": "^0.3.2",
+    "textlint": "*",
+    "@textlint/textlint-plugin-markdown": "*",
+    "textlint-plugin-asciidoc-loose": "*",
+    "@proofdict/textlint-rule-proofdict": "*",
+    "textlint-rule-preset-japanese": "*",
+    "textlint-rule-preset-ja-spacing": "*",
+    "textlint-rule-general-novel-style-ja": "*",
+    "textlint-rule-preset-ja-technical-writing": "*",
+    "textlint-rule-spellcheck-tech-word": "*",
+    "textlint-rule-preset-jtf-style": "*"
+  }
+}

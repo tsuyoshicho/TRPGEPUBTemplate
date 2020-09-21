@@ -1,0 +1,5 @@
+runner:
+  textlint:
+    cmd: npm run lint-gh
+    format: checkstyle
+    name: textlint

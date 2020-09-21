@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Create by Tsuyoshi CHO <Tsuyoshi.CHO@Gmail.com> */
+/* It is licensed under the CC-BY-SA 4.0 http://creativecommons.org/licenses/by-sa/4.0/deed.ja */
+
+/* 共通スタイル */
+
+/* 外部ファイル */
+/* mplus font */
+@import url("https://mplus-webfonts.osdn.jp/mplus_webfonts.css");
+
+/* 全体 */
+
+/* 関数 */
+@function ImageUrl($fileName) {
+  /* $imagesPath: "path" を定義しておくこと */
+$imagesPath: "./" !default;
+  @return url($imagesPath + $fileName);
+}
+/* EOF */

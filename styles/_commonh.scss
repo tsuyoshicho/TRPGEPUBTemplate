@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Create by Tsuyoshi CHO <Tsuyoshi.CHO@Gmail.com> */
+/* It is licensed under the CC-BY-SA 4.0 http://creativecommons.org/licenses/by-sa/4.0/deed.ja */
+
+/* 横書き 共通スタイル */
+
+@if $orientation == "horizontal" {
+
+    /* 全体 */
+
+    body{
+        font-family:  "HiraMinProN-W3","ＭＳ 明朝", "さざなみ明朝",serif, sans-serif;
+    }
+
+}
+/* EOF */

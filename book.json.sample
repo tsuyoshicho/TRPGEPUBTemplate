@@ -1,0 +1,24 @@
+{
+  "plugins": [
+    "styles-sass",
+    "puml"
+  ],
+  "pluginsConfig": {
+    "autocover": {
+      "title": "TRPG EPUB Template",
+      "author": "TRPG EPUB Template Team/CC SA-BY 4.0"
+    },
+    "fontsettings": {
+      "theme": 'sepia', // 'white', 'sepia', 'night' or 'white',
+      "family": 'serif', // 'serif' or 'sans',
+      "size": 2         // 1 - 4
+    }
+  },
+  "styles": {
+      "website": "./styles/website.scss",
+      "ebook": "./styles/ebook.scss"
+  },
+  "variables": {
+    "note": "ノート"
+  }
+}

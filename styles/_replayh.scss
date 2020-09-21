@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Create by Tsuyoshi CHO <Tsuyoshi.CHO@Gmail.com> */
+/* It is licensed under the CC-BY-SA 4.0 http://creativecommons.org/licenses/by-sa/4.0/deed.ja */
+
+@if $orientation == "horizontal" {
+
+    /* 横書き */
+
+    /* 全体 */
+
+    /* Dialogue(台詞) */
+    /* 台詞のブロック間に0.5emの空きを作る
+       (横書きなので、後ろのブロックが前(上)に対して0.5のマージンを持つ) */
+    .dialog + .dialog {
+        margin-top:   0.5em;
+    }
+
+    /* Narrator(地の文、語り手) */
+    /* <p class="body_text">... など */
+    /* margin-startなどはまだまだアテにならないので手動で設定 */
+    .body_text {
+        margin-left:  2em;
+        margin-top:   0.5em;
+        margin-bottom:0.5em;
+        color: darkgreen;
+    }
+
+}
+/* EOF */
