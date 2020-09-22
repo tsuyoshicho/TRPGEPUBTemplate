@@ -7,20 +7,32 @@
 /* white id:0 sepia id:1 night id:2 */
 @import url("https://mplus-webfonts.osdn.jp/mplus_webfonts.css");
 .book.font-family-0 {
+  /* IPAゴシック */
+  /* font-family: "IPAゴシック","IPAGothic" , sans-serif; */
+  /* IPA明朝 */
+  font-family: "IPA明朝","IPAMincho",serif;
   /* 游ゴシック */
-  font-family: mplus-2c-medium,"游ゴシック", "Yu Gothic", YuGothic, sans-serif;
+  /* font-family: "游ゴシック", "Yu Gothic", YuGothic, sans-serif; */
   /* 游明朝 */
   /* font-family: "游明朝体", "Yu Mincho", YuMincho, serif; */ }
 
 .book.font-family-1 {
+  /* IPAゴシック */
+  /* font-family: "IPAゴシック","IPAGothic" , sans-serif; */
+  /* IPA明朝 */
+  font-family: "IPA明朝","IPAMincho",serif;
   /* 游ゴシック */
-  font-family: mplus-2c-medium,"游ゴシック", "Yu Gothic", YuGothic, sans-serif;
+  /* font-family: "游ゴシック", "Yu Gothic", YuGothic, sans-serif; */
   /* 游明朝 */
   /* font-family: "游明朝体", "Yu Mincho", YuMincho, serif; */ }
 
 .book.font-family-2 {
+  /* IPAゴシック */
+  /* font-family: "IPAゴシック","IPAGothic" , sans-serif; */
+  /* IPA明朝 */
+  font-family: "IPA明朝","IPAMincho",serif;
   /* 游ゴシック */
-  font-family: mplus-2c-medium,"游ゴシック", "Yu Gothic", YuGothic, sans-serif;
+  /* font-family: "游ゴシック", "Yu Gothic", YuGothic, sans-serif; */
   /* 游明朝 */
   /* font-family: "游明朝体", "Yu Mincho", YuMincho, serif; */ }
 
@@ -106,7 +118,12 @@ h1, h2 {
     color: blue; }
     .name > .gm:before, .name.gm:before {
       /* アイコン */
-      content: url("./images/gm.png"); }
+      background-image: url("./images/gm.png");
+      background-size: 60px 60px;
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      content: ""; }
   .name > .pcall, .name.pcall {
     color: brown; }
   .name > .pc1, .name > .user1, .name.pc1, .name.user1 {
@@ -125,11 +142,21 @@ h1, h2 {
 /* PC1などではなくユーザー名をクラス名として、識別するには、extendを使う */
 .name.user1:before {
   /* アイコン */
-  content: url("./images/user1.png"); }
+  background-image: url("./images/user1.png");
+  background-size: 60px 60px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  content: ""; }
 
 .name.user2:before {
   /* アイコン */
-  content: url("./images/user2.png"); }
+  background-image: url("./images/user2.png");
+  background-size: 60px 60px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  content: ""; }
 
 /* 発言 */
 /* 確認用 */

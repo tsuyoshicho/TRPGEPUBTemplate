@@ -11,9 +11,9 @@
 /* 全体 */
 
 /* 関数 */
-@function ImageUrl($fileName) {
-  /* $imagesPath: "path" を定義しておくこと */
-$imagesPath: "./" !default;
-  @return url($imagesPath + $fileName);
+@function ImagePath($fileName) {
+  /* $imagesBase: "path" を定義しておくこと */
+$imagesBase: "./" !default;
+  @return $imagesBase + $fileName;
 }
 /* EOF */

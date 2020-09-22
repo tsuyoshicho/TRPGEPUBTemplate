@@ -65,7 +65,12 @@ h1, h2 {
     color: blue;
     &:before {
       /* アイコン */
-      content: ImageUrl("gm.png");
+      background-image: url(ImagePath("gm.png"));
+      background-size: 60px 60px;
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      content:"";
     }
   }
 
@@ -101,7 +106,12 @@ h1, h2 {
     &.#{$name} {
       &:before {
         /* アイコン */
-        content: ImageUrl(#{$image});
+          background-image: url(ImagePath(#{$image}));
+          background-size: 60px 60px;
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          content:"";
       }
     }
   }
