@@ -1,7 +1,7 @@
 {
-  "name": "WhenScarletIceMelted",
+  "name": "TRPGEPUBTemplate",
   "version": "1.0.0",
-  "description": "TRPG Replay - When ScarletIce mtelted.",
+  "description": "TRPG EPUB Template",
   "main": "",
   "config": {
   },
@@ -10,8 +10,8 @@
     "lint": "textlint README.md SUMMARY.md GLOSSARY.md doc/*",
     "start": "honkit serve",
     "build": "honkit build && rm -rf docs && cp -r _book docs",
-    "pdf":  "honkit pdf  . WhenScarletIceMelted.pdf",
-    "epub": "honkit epub . WhenScarletIceMelted.epub"
+    "pdf":  "honkit pdf  . output.pdf",
+    "epub": "honkit epub . output.epub"
   },
   "author": "Tsuyoshi CHO <Tsuyoshi.CHO@Gmail.com>",
   "devDependencies": {
