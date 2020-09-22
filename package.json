@@ -15,8 +15,8 @@
   },
   "author": "Tsuyoshi CHO <Tsuyoshi.CHO@Gmail.com>",
   "devDependencies": {
-    "gitbook-cli": "^2.3.2",
-    "svgexport": "^0.3.2",
+    "gitbook-cli": "2.3.2",
+    "svgexport": "0.3.2",
     "textlint": "*",
     "@textlint/textlint-plugin-markdown": "*",
     "textlint-plugin-asciidoc-loose": "*",
