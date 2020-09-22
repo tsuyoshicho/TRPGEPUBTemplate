@@ -1,0 +1,93 @@
+name: release
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cache npm
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Setup calibre
+        run: |
+          wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin install_dir=${GITHUB_WORKSPACE}/ isolated=y
+          echo "::add-path::${GITHUB_WORKSPACE}/calibre"
+
+      - name: Build
+        id: build
+        run: |
+          npm ci
+          (npm run pdf  && echo "::set-output name=pdf::$(ls *.pdf)")   || true
+          (npm run epub && echo "::set-output name=epub::$(ls *.epub)") || true
+
+      # Bump version on merging Pull Requests with specific labels.
+      # (bump:major,bump:minor,bump:patch)
+      - name: Bump version
+        id: bumpr
+        if: "!startsWith(github.ref, 'refs/tags/')"
+        uses: haya14busa/action-bumpr@v1
+
+      # Update corresponding major and minor tag.
+      # e.g. Update v1 and v1.2 when releasing v1.2.3
+      - name: Update version
+        uses: haya14busa/action-update-semver@v1
+        if: "!steps.bumpr.outputs.skip"
+        with:
+          tag: ${{ steps.bumpr.outputs.next_version }}
+
+      # Get tag name.
+      - name: Check tag
+        id: tag
+        uses: haya14busa/action-cond@v1
+        with:
+          cond: "${{ startsWith(github.ref, 'refs/tags/') }}"
+          if_true: ${{ github.ref }}
+          if_false: ${{ steps.bumpr.outputs.next_version }}
+
+      # Create release.
+      - name: Release
+        uses: actions/create-release@v1
+        id: create_release
+        if: "steps.tag.outputs.value != ''"
+        env:
+          # This token is provided by Actions, you do not need to create your own token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.tag.outputs.value }}
+          release_name: Release ${{ steps.tag.outputs.value }}
+          body: ${{ steps.bumpr.outputs.message }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Asset PDF
+        uses: actions/upload-release-asset@v1
+        if: steps.tag.outputs.value != '' && steps.build.outputs.pdf != ''
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+          asset_path: ./${{ steps.build.outputs.pdf }}
+          asset_name: ${{ steps.build.outputs.pdf }}
+          asset_content_type: application/pdf
+
+      - name: Upload Release Asset EPUB
+        uses: actions/upload-release-asset@v1
+        if: steps.tag.outputs.value != '' && steps.build.outputs.epub != ''
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+          asset_path: ./${{ steps.build.outputs.epub }}
+          asset_name: ${{ steps.build.outputs.epub }}
+          asset_content_type: application/epub+zip

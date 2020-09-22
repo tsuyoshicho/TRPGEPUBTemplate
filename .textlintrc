@@ -2,7 +2,6 @@
   "filters": {},
   "plugins": [
     "@textlint/markdown",
-    "asciidoc-loose"
   ],
   "rules": {
     "@proofdict/proofdict": {
@@ -20,8 +19,8 @@
       "ja-no-space-between-full-width": false
     },
     "preset-jtf-style": false,
-    "general-novel-style-ja": false,
     "preset-ja-technical-writing": false,
-    "spellcheck-tech-word": false
+    "spellcheck-tech-word": false,
+    "general-novel-style-ja": false
   }
 }
