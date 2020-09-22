@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Create by Tsuyoshi CHO <Tsuyoshi.CHO@Gmail.com> */
+/* It is licensed under the CC-BY-SA 4.0 http://creativecommons.org/licenses/by-sa/4.0/deed.ja */
+
+/* Target common TRPG Replay HTML */
+
+/*
+ * 以下の書式でマークアップされていることを想定
+ * <p class="dialog"><span class="gm name">ＧＭ</span><span class="separator">：</span><span class="gm phrase">さて、それでは自己紹介をお願いします。</span></p>
+ * もしくは
+ * <div class="dialog"><p><span class="name gm"></span><span class="separator"></span><span class="gm phrase"></span></p></div>
+ */
+
+/* 変数 */
+$playernum: 6;
+
+/* 全体 */
+
+body{
+  background-color: lightgray;
+}
+
+/* 水平線 */
+/* <hr /> */
+hr {
+  border:none;
+  text-align: center;
+  clear: both;
+
+  &:before {
+    content:"■◇■◇■◇■◇■◇■◇■◇■◇■◇■◇■◇■◇■◇■◇■◇■◇";
+  }
+}
+
+/* タイトル(h1)、章(h2) */
+$open_quotemark:  "◆", "■", "□", "◇", "▽";
+$close_quotemark: "◆", "■", "□", "◇", "▽";
+@for $level from 1 through 5 {
+  $openmark:  nth($open_quotemark, $level);
+  $closemark: nth($close_quotemark, $level);
+  h#{$level} {
+    quotes: quote(#{$openmark}) quote(#{$closemark});
+
+    &:before {
+      content:open-quote;
+    }
+
+    &:after {
+      content:close-quote;
+    }
+  }
+}
+
+h1, h2 {
+  clear: both;
+}
+
+/* Dialogue(台詞) */
+.name {
+  font-size: 110%;
+  letter-spacing: 0.05em;
+
+  /* GM */
+  >.gm, &.gm {
+    color: blue;
+    &:before {
+      /* アイコン */
+      content: ImageUrl("gm.png");
+    }
+  }
+
+  /* PC 全員(複数) */
+  >.pcall, &.pcall {
+    color: brown;
+  }
+
+  /* PCs */
+  @for $num from 1 through $playernum {
+    >.pc#{$num}, &.pc#{$num} {
+      color: green;
+    }
+  }
+}
+
+/* PC1などではなくユーザー名をクラス名として、識別するには、extendを使う */
+.user1 {
+  @extend .pc1;
+}
+
+.user2 {
+  @extend .pc2;
+}
+
+.name {
+  $member: (
+    user1:"user1.png",
+    user2:"user2.png",
+  );
+
+  @each $name, $image in $member {
+    &.#{$name} {
+      &:before {
+        /* アイコン */
+        content: ImageUrl(#{$image});
+      }
+    }
+  }
+}
+
+/* 発言 */
+/* 確認用 */
+.phrase {
+/*  color: green; */
+}
+
+/* 発言部分の括弧(仮) */
+q {
+  quotes: "「" "」" "『" "』";
+
+  &:before {
+    content:open-quote;
+  }
+
+  &:after {
+    content:close-quote;
+  }
+}
+
+/* Narrator(地の文、語り手) */
+/* <p class="body_text">... など */
+.body_text {
+  color: darkblue;
+}
+/* EOF */

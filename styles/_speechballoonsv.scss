@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* CSS Create by Tsuyoshi CHO <Tsuyoshi.CHO@Gmail.com> */
+/* It is licensed under the CC-BY-SA 4.0 http://creativecommons.org/licenses/by-sa/4.0/deed.ja */
+
+/* Target TRPG Comic Speech Balloon */
+
+/* TRPG 吹き出し風 縦書き */
+
+@if $orientation == "vertical" {
+  @if $balloons {
+
+        .dialog {
+            /* 親ボックスはマージンを考えない/必要なら付けること */
+            padding: 0;
+            margin: 0;
+
+            /* 並びとして左寄せ、Unicodeでの設定方向は無視(とりあえず)、左から右へ */
+            text-align: left;
+            unicode-bidi: bidi-override;
+            direction: ltr;
+
+            /* ボックスの初期設定、相対座標設定とする(inline-blockのため) */
+            position: relative;
+
+            /* inline-blockの並びを行なうため、改行禁止 */
+            white-space: nowrap;
+        }
+
+        .dialog > .separator {
+            /* dialog内のseparator(:)の消去 */
+            display:none;
+        }
+
+        .name {
+            /* インラインブロック */
+            display: inline-block;
+            /* ブロックは上寄せ */
+            vertical-align: top;
+            /* 改行なし(名前部分のため) */
+            white-space: nowrap;
+
+            /* 子ボックスはマージン 必要なら設定 */
+            margin: 0.5em;
+            padding: 0.5em;
+
+            /* 背景とボーダー */
+            background-color: White;
+            border: solid 0.2em Black;
+            border-radius: 0.7em;
+        }
+
+        .phrase {
+            /* インラインブロック */
+            display: inline-block;
+            /* ブロックは上寄せ */
+            vertical-align: top;
+            /* 改行(本文のため) */
+            white-space: normal; /* ソースの空白 */
+            letter-spacing: normal; /* 文字間の隙間 */
+            word-spacing: normal; /* 単語間の隙間 */
+            line-break: normal; /* 禁則 */
+            word-break: break-all; /* ボックス内改行 */
+            word-wrap: break-word; /* ボックス内改行 */
+
+            /* 子ボックスはマージン 必要なら設定 */
+            position: relative; /* 吹き出しの設定のため、ここでも相対を指定 */
+            margin: 0.5em;
+            padding: 0.5em;
+            max-height: 80%; /* 100%だと親の最大高と同じになる(nowrapのため?)ので、この程度を指定してある(ほんとはname分の-emにしたい) */
+
+
+            /* 背景とボーダー */
+            background-color: White;
+            border: solid 0.2em Black;
+            border-radius: 0.2em;
+        }
+
+        /* 吹き出し */
+        /* beforeでボーダーを三角に、afterで(ボーダーを背景と同じ色にして)中抜きをする */
+        .phrase:after, .phrase:before {
+            border: solid 1em transparent; /* 種別はsolidにするしかない、太さは仮、色は透明(rgba( 0, 0, 0, 0)?) */
+            /* 並べる関係からインラインブロック */
+            display: inline-block;
+            /* ブロックは上寄せ */
+            vertical-align: top;
+
+            /* 中身は半角空白(無しがよい?) */
+            content: " ";
+
+            /* ブロックとして大きさは無い */
+            height: 0;
+            width: 0;
+
+            /* 配置を絶対座標で指示 */
+            position: absolute;
+            bottom: 100%; /* メインコンテンツの左に位置させるため、下から100%分動かす */
+            right: 1em; /* 最初の行に置いている、パディング0.5emなのでそれ+中央までの0.5em のはず */
+        }
+
+        .phrase:before {
+            border-bottom-color: Black; /* 右だけ色を付ける、これで三角になる。色はボーダー */
+            border-width: 0.9em; /* 三角のサイズ+三角としての上下のボーダー分 */
+            margin-right: -0.9em; /* 上記のボーダー設定を中心から表示できるようにするため、マージンをマイナスにする */
+        }
+
+        .phrase:after {
+            border-bottom-color: White; /* 右だけ色を付ける、これで三角になる。色は背景 */
+            border-width: 0.7em; /* 三角のサイズ分 */
+            margin-right: -0.7em; /* 上記のボーダー設定を中心から表示できるようにするため、マージンをマイナスにする */
+        }
+
+    }
+}
+/* EOF */

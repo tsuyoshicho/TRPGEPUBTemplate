@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Create by Tsuyoshi CHO <Tsuyoshi.CHO@Gmail.com> */
+/* It is licensed under the CC-BY-SA 4.0 http://creativecommons.org/licenses/by-sa/4.0/deed.ja */
+
+/* 縦書き/横書き */
+/* $orientation: "vertical" */
+$orientation: "horizontal";
+/* 吹き出し形式 */
+$balloons: false;
+
+$imagesPath: "./";
+
+/* white id:0 sepia id:1 night id:2 */
+.book{
+  &.font-family-0 {
+    /* 游ゴシック */
+    /* font-family: "游ゴシック", "Yu Gothic", YuGothic, sans-serif; */
+
+    /* 游明朝 */
+    font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+  }
+
+  &.font-family-1 {
+    /* 游ゴシック */
+    /* font-family: "游ゴシック", "Yu Gothic", YuGothic, sans-serif; */
+
+    /* 游明朝 */
+    font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+  }
+
+  &.font-family-2 {
+    /* 游ゴシック */
+    /* font-family: "游ゴシック", "Yu Gothic", YuGothic, sans-serif; */
+
+    /* 游明朝 */
+    font-family: "游明朝体", "Yu Mincho", YuMincho, serif;
+  }
+}
+
+/* 共通 */
+@import "common";
+@import "replay";
+/* 縦書き */
+@import "commonv";
+@import "replayv";
+/* 横書き */
+@import "commonh";
+@import "replayh";
+/* 吹き出し形式サポート */
+@import "speechballoonsv";
+@import "speechballoonsh";
+
+/* EOF */

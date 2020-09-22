@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Create by Tsuyoshi CHO <Tsuyoshi.CHO@Gmail.com> */
+/* It is licensed under the CC-BY-SA 4.0 http://creativecommons.org/licenses/by-sa/4.0/deed.ja */
+
+/* 縦書き 共通スタイル */
+
+@if $orientation == "vertical" {
+
+    /* 全体 */
+
+    body{
+        font-family: "HiraMinProN-W3", "@ＭＳ 明朝", "@さざなみ明朝", serif, sans-serif;
+        /*
+          writing-mode: vertical-rl;
+          line-break: normal;
+         */
+        /*
+          -webkit-writing-mode: vertical-rl;
+          -webkit-line-break: normal;
+         */
+        -epub-writing-mode: vertical-rl;
+        -epub-line-break: normal;
+    }
+
+}
+/* EOF */

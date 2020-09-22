@@ -1,0 +1,26 @@
+{
+  "filters": {},
+  "plugins": [
+    "@textlint/markdown",
+  ],
+  "rules": {
+    "@proofdict/proofdict": {
+      "dictURL": "https://tsuyoshicho.github.io/proof-dictionary/"
+    },
+    "preset-japanese": {
+      "sentence-length": false,
+      "max-ten": {
+        "max": 5
+      },
+      "no-mix-dearu-desumasu": false
+    },
+    "preset-ja-spacing": {
+      "ja-space-between-half-and-full-width": false,
+      "ja-no-space-between-full-width": false
+    },
+    "preset-jtf-style": false,
+    "preset-ja-technical-writing": false,
+    "spellcheck-tech-word": false,
+    "general-novel-style-ja": false
+  }
+}
