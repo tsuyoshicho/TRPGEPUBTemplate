@@ -13,7 +13,21 @@
     "pdf":  "honkit pdf  . output.pdf",
     "epub": "honkit epub . output.epub"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsuyoshicho/TRPGEPUBTemplate.git"
+  },
+  "keywords": [
+    "TRPG",
+    "EPUB",
+    "Replay"
+  ],
   "author": "Tsuyoshi CHO <Tsuyoshi.CHO@Gmail.com>",
+  "license": "CC-BY-NC-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/tsuyoshicho/TRPGEPUBTemplate/issues"
+  },
+  "homepage": "https://github.com/tsuyoshicho/TRPGEPUBTemplate#readme",
   "devDependencies": {
     "@proofdict/textlint-rule-proofdict": "^3.1.1",
     "@textlint/textlint-plugin-markdown": "^5.2.6",
