@@ -21,7 +21,7 @@
    },
    "styles":{
      "website":"./styles/website.scss",
-     "ebook":"./styles/ebook.scss",
+     "epub":"./styles/epub.scss",
      "pdf":"./styles/pdf.scss"
    },
    "pdf":{
