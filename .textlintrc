@@ -20,6 +20,8 @@
     "preset-ja-spacing": {
       "ja-no-space-between-full-width": false
     },
-    "general-novel-style-ja": true
+    "general-novel-style-ja": {
+      "chars_leading_paragraph": false
+    }
   }
 }
