@@ -6,7 +6,9 @@
   },
   "rules": {
     "@proofdict/proofdict": false,
-    "prh": false,
+    "prh": {
+      "rulePaths": ["./prh.yml"]
+    },
     "preset-japanese": {
       "sentence-length": false,
       "max-ten": {
@@ -15,7 +17,9 @@
       "no-mix-dearu-desumasu": false
     },
     "preset-ja-technical-writing": false,
-    "preset-ja-spacing": false,
-    "general-novel-style-ja": false
+    "preset-ja-spacing": {
+      "ja-no-space-between-full-width": false
+    },
+    "general-novel-style-ja": true
   }
 }

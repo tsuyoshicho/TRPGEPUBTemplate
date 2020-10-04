@@ -2,6 +2,8 @@ version: 1
 
 imports:
   - ./azu-prh-rules/ja/typo.yml
+  - ./azu-prh-rules/ja/kanji-open.yml
+  - ./azu-prh-rules/ja/spoken.yml
   - ./prh-rules/files/markdown.yml
-  # - ./prh-rules/media/techbooster.yml
+  - ./prh-rules/languages/ja/typo.yml
 
