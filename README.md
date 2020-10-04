@@ -1,6 +1,6 @@
-# textlint-template-base
+# textlint-template-novel
 
-Japanese document writing base for textlint
+Novel (like natural Japanese document) writing base for textlint
 
 ## 利用法
 
