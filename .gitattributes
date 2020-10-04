@@ -1,14 +1,10 @@
-# -*- coding: utf-8 -*-
-# vim:fenc=utf-8 ff=unix
+# Always commit newlines as LF (ref #102)
+.gitattributes    text eol=lf
+.gitignore        text eol=lf
+.gitmodules       text eol=lf
 
-# git system files
-.gitattributes eol=lf
-.gitignore     eol=lf
+package-lock.json text eol=lf
+package.json      text eol=lf
 
-.travis.yml    eol=lf
-deploy.sh      eol=lf
-# Makefile       eol=lf
-
-*.gpg          binary
-*.md           text
-
+*.md              text
+# EOF
