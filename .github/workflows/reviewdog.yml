@@ -27,7 +27,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-check
           level: info
-          textlint_flags: "doc/**"
+          textlint_flags: "README.md GLOSSARY.md SUMMARY.md doc/**"
       - name: textlint-github-pr-review
         uses: tsuyoshicho/action-textlint@v1
         if: github.event_name == 'pull_request'
@@ -35,4 +35,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           level: info
-          textlint_flags: "doc/**"
+          textlint_flags: "README.md GLOSSARY.md SUMMARY.md doc/**"
