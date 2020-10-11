@@ -12,8 +12,6 @@ set -u
 # > cmd || cmd
 # > set -e
 set -e
-# if command in pipe error : stop code
-set -o pipefail
 
 # setup
 url="https://sourceforge.net/projects/plantuml/files/plantuml.jar/download"
