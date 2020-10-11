@@ -7,7 +7,7 @@
     "creativecommons",
     "styles-sass-fix",
     "disqus",
-    "puml"
+    "uml"
    ],
    "pluginsConfig":{
      "disqus": {
