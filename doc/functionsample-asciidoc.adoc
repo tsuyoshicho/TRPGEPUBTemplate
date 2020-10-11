@@ -27,14 +27,14 @@ book.jsonに以下のように設定
 
 gitbook-plugin-pumlによるPlantUML対応 これにより、必要なら図解できる
 
-{% plantuml %}
+{% uml %}
 GM->PC1 : hello
-{% endplantuml %}
+{% enduml %}
 
 {% raw %}
-{% plantuml %} +
+{% uml %} +
 GM+++->+++PC1 : hello +
-{% endplantuml %}
+{% enduml %}
 {% endraw %}
 
 *日本語は有効でない様子*
