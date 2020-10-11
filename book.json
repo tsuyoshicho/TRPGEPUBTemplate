@@ -17,6 +17,10 @@
        "theme":"sepia",
        "family":"serif",
        "size":2
+     },
+     "uml": {
+       "format": "svg",
+       "nailgun": false
      }
    },
    "styles":{
