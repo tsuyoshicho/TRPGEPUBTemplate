@@ -22,7 +22,7 @@ jobs:
       - name: Setup calibre
         run: |
           wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin install_dir=${GITHUB_WORKSPACE}/ isolated=y
-          echo "::add-path::${GITHUB_WORKSPACE}/calibre"
+          echo "${GITHUB_WORKSPACE}/calibre" >> $GITHUB_PATH
 
       - name: Setup PlantUML
         run: |
