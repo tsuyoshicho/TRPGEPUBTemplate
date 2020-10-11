@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - fix/plantuml
 jobs:
   ghpages:
     name: Convert and deploy HonKit
