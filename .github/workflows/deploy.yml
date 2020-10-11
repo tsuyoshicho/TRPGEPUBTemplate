@@ -23,8 +23,6 @@ jobs:
       - name: Setup PlantUML
         run: |
           sh ./tools/plantuml_download.sh
-          ls .
-          ls ./tools/
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@v1
       - name: Build
