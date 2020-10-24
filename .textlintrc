@@ -7,7 +7,7 @@
   "rules": {
     "@proofdict/proofdict": false,
     "prh": {
-      "rulePaths": ["./prh.yml"]
+      "rulePaths": ["./dict/prh.yml"]
     },
     "preset-japanese": {
       "sentence-length": false,
