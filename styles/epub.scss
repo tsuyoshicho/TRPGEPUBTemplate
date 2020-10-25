@@ -8,7 +8,8 @@ $orientation: "horizontal";
 /* 吹き出し形式 */
 $balloons: false;
 
-$imagesBase: "./";
+/* sass/scss comple and store project root, need relpath from project top */
+$imagesBase: "./images/";
 
 /* white id:0 sepia id:1 night id:2 */
 .book{
