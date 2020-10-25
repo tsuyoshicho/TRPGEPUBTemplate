@@ -43,9 +43,9 @@ jobs:
           dot -V
           # echo wkhtmltopdf
           # wkhtmltopdf --version
-          echo Java and PlantUML - test dot
-          java --version
-          java -jar plantuml.jar -testdot
+          # echo Java and PlantUML - test dot
+          # java --version
+          # java -jar plantuml.jar -testdot
 
           echo build
           # uml (gitbook-plugin-uml) plugin implement miss, need pre build for ebook generate.
