@@ -19,7 +19,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Setup calibre
+      - name: Setup Calibre
         run: |
           wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin install_dir=${GITHUB_WORKSPACE}/ isolated=y
           echo "${GITHUB_WORKSPACE}/calibre" >> $GITHUB_PATH
@@ -33,6 +33,23 @@ jobs:
         id: build
         run: |
           npm ci
+
+          echo versions
+          echo honkit
+          npx honkit --version
+          echo ebook-convert
+          ebook-convert --version
+          echo dot
+          dot -V
+          echo wkhtmltopdf
+          wkhtmltopdf --version
+          echo Java and PlantUML(test dot)
+          java --version
+          java -jar plantuml.jar -testdot
+
+          echo build
+          # uml (gitbook-plugin-uml) plugin implement miss, need pre build for ebook generate.
+          npm run build
           (npm run pdf  && echo "::set-output name=pdf::$(ls *.pdf)")   || true
           (npm run epub && echo "::set-output name=epub::$(ls *.epub)") || true
 
