@@ -41,8 +41,8 @@ jobs:
           ebook-convert --version
           echo dot
           dot -V
-          echo wkhtmltopdf
-          wkhtmltopdf --version
+          # echo wkhtmltopdf
+          # wkhtmltopdf --version
           echo Java and PlantUML(test dot)
           java --version
           java -jar plantuml.jar -testdot
