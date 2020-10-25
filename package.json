@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" ",
     "lint": "textlint README.md SUMMARY.md GLOSSARY.md doc/*",
     "start": "honkit serve",
-    "build": "honkit build && rm -rf docs && cp -r _book docs",
+    "build": "honkit build",
     "pdf": "honkit pdf  . output.pdf",
     "epub": "honkit epub . output.epub"
   },
