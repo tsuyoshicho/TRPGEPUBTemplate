@@ -4,6 +4,7 @@
 /* 縦書き/横書き */
 /* $orientation: "vertical" */
 /* 吹き出し形式 */
+/* sass/scss comple and store project root, need relpath from project top */
 /* white id:0 sepia id:1 night id:2 */
 @import url("https://mplus-webfonts.osdn.jp/mplus_webfonts.css");
 .book.font-family-0 {
