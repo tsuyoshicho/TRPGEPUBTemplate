@@ -48,8 +48,6 @@ jobs:
           # java -jar plantuml.jar -testdot
 
           echo build
-          # uml (gitbook-plugin-uml) plugin implement miss, need pre build for ebook generate.
-          npm run build
           (npm run pdf  && echo "::set-output name=pdf::$(ls *.pdf)")   || true
           (npm run epub && echo "::set-output name=epub::$(ls *.epub)") || true
 
