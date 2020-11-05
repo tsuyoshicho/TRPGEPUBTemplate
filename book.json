@@ -5,7 +5,7 @@
   "language": "ja",
   "plugins": [
     "creativecommons",
-    "styles-sass-fix",
+    "styles-sass",
     "disqus",
     "uml"
    ],
