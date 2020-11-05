@@ -8,8 +8,6 @@ Purpose
 
 When any make a TRPG replay book in EPUB, to create what is a useful templates group.
 
-based on [tsuyoshicho/TRPGEpub](https://github.com/tsuyoshicho/TRPGEpub).
-
 Template document apply License
 ----------------------
 
@@ -50,8 +48,6 @@ TRPGリプレイのEPUBファイルのテンプレート。
 ----
 
 TRPGのリプレイ本をEPUBで作る際、有用なテンプレート群となるものを作成。
-
-[tsuyoshicho/TRPGEpub](https://github.com/tsuyoshicho/TRPGEpub)をベースとしている。
 
 テンプレート文書に適用されるライセンス
 ----------
