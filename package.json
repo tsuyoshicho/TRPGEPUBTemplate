@@ -28,9 +28,9 @@
   },
   "homepage": "https://github.com/tsuyoshicho/TRPGEPUBTemplate#readme",
   "devDependencies": {
-    "@adiwg/honkit-plugin-styles-sass": "^2.0.0",
     "@proofdict/textlint-rule-proofdict": "^3.1.1",
     "@textlint/textlint-plugin-markdown": "^5.2.6",
+    "@tsuyoshi_cho/honkit-plugin-styles-sass": "^1.0.0",
     "gitbook-plugin-creativecommons": "^1.0.2",
     "gitbook-plugin-disqus": "^1.0.1",
     "gitbook-plugin-uml": "^1.0.5",
