@@ -7,8 +7,8 @@
     "creativecommons",
     "@tsuyoshi_cho/styles-sass",
     "disqus",
-    "uml"
-   ],
+    "@ansanloms/uml"
+  ],
    "pluginsConfig":{
      "disqus": {
        "shortName": "tsuyoshi-cho-gitbook"
