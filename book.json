@@ -19,8 +19,9 @@
       "size":2
     },
     "uml": {
-      "format": "svg",
-      "nailgun": false
+      "format": "png",
+      "charset": "utf8",
+      "config": "classic"
     }
   },
   "styles":{
