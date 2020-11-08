@@ -27,6 +27,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14'
+      - name: Set Python path to npm
+        run: |
+          npm config set python "${pythonLocation}/python"
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@v1
       - name: Setup PlantUML

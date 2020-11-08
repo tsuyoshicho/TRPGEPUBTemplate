@@ -28,6 +28,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14'
+      - name: Set Python path to npm
+        run: |
+          npm config set python "${pythonLocation}/python"
       - name: Select reporter
         uses: haya14busa/action-cond@v1
         id: reporter
