@@ -24,9 +24,6 @@ jobs:
           wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin install_dir=${GITHUB_WORKSPACE}/ isolated=y
           echo "${GITHUB_WORKSPACE}/calibre" >> $GITHUB_PATH
 
-      - name: Setup PlantUML
-        run: |
-          sh ./tools/plantuml_download.sh
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@v1
       - name: Build
