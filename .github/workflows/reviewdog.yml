@@ -20,17 +20,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Setup Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '14'
-      - name: Set Python path to npm
-        run: |
-          npm config set python "${pythonLocation}/python"
       - name: Select reporter
         uses: haya14busa/action-cond@v1
         id: reporter

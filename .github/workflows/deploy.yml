@@ -19,22 +19,8 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Setup Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '14'
-      - name: Set Python path to npm
-        run: |
-          npm config set python "${pythonLocation}/python"
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@v1
-      - name: Setup PlantUML
-        run: |
-          sh ./tools/plantuml_download.sh
       - name: Build
         run: |
           npm ci

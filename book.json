@@ -9,38 +9,38 @@
     "disqus",
     "@ansanloms/uml"
   ],
-   "pluginsConfig":{
-     "disqus": {
-       "shortName": "tsuyoshi-cho-gitbook"
-     },
-     "fontsettings":{
-       "theme":"sepia",
-       "family":"serif",
-       "size":2
-     },
-     "uml": {
-       "format": "svg",
-       "nailgun": false
-     }
-   },
-   "styles":{
-     "website":"./styles/website.scss",
-     "epub":"./styles/epub.scss",
-     "pdf":"./styles/pdf.scss"
-   },
-   "pdf":{
-     "pageNumbers":true,
-     "fontFamily":"IPAMincho",
-     "fontSize":9,
-     "paperSize":"a6",
-     "margin":{
-       "top":26,
-       "bottom":8,
-       "right":8,
-       "left":8
-     }
-   },
-   "variables":{
-     "note":"ノート"
-   }
+  "pluginsConfig":{
+    "disqus": {
+      "shortName": "tsuyoshi-cho-gitbook"
+    },
+    "fontsettings":{
+      "theme":"sepia",
+      "family":"serif",
+      "size":2
+    },
+    "uml": {
+      "format": "svg",
+      "nailgun": false
+    }
+  },
+  "styles":{
+    "website":"./styles/website.scss",
+    "epub":"./styles/epub.scss",
+    "pdf":"./styles/pdf.scss"
+  },
+  "pdf":{
+    "pageNumbers":true,
+    "fontFamily":"IPAMincho",
+    "fontSize":9,
+    "paperSize":"a6",
+    "margin":{
+      "top":26,
+      "bottom":8,
+      "right":8,
+      "left":8
+    }
+  },
+  "variables":{
+    "note":"ノート"
+  }
 }
