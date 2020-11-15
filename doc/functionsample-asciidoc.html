@@ -7,7 +7,7 @@
         <title>機能サンプル/Asciidoc · TRPG EPUB Template</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.8">
+        <meta name="generator" content="HonKit 3.6.12">
         <meta name="author" content="TRPG EPUB Template Team/CC SA-BY 4.0">
         
         
@@ -34,7 +34,7 @@
 
     
         
-        <link rel="stylesheet" href="../website-1604853400395.css">
+        <link rel="stylesheet" href="../website-1605458545917.css">
         
     
         
@@ -62,7 +62,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -240,32 +240,32 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6A5F;&#x80FD;&#x89E3;&#x8AAC;asciidoc&#x63A8;&#x5968;&#x7248;">&#x6A5F;&#x80FD;&#x89E3;&#x8AAC;(Asciidoc/&#x63A8;&#x5968;&#x7248;)</h1>
+                                <h1 id="機能解説asciidoc推奨版">機能解説(Asciidoc/推奨版)</h1>
 <div class="sect1">
-<h2 id="_&#x5909;&#x6570;">&#x5909;&#x6570;</h2>
+<h2 id="_変数">変数</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>gitbook&#x672C;&#x4F53;&#x6A5F;&#x80FD;
-&#x306A;&#x306B;&#x304B;&#x3057;&#x3089;&#x5DEE;&#x3057;&#x66FF;&#x3048;&#x306B;&#x4F7F;&#x3048;&#x308B;&#x3001;&#x5834;&#x5408;&#x306B;&#x3088;&#x3063;&#x3066;&#x306F;PC&#x540D;&#x306B;&#x3057;&#x3066;&#x3082;&#x3044;&#x3044;&#x304B;&#x3082;&#x3002;</p>
+<p>gitbook本体機能
+なにかしら差し替えに使える、場合によってはPC名にしてもいいかも。</p>
 </div>
 <div class="paragraph">
-<p>book.json&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x8A2D;&#x5B9A;</p>
+<p>book.jsonに以下のように設定</p>
 </div>
 <div class="literalblock">
 <div class="content">
 <pre>  &quot;variables&quot;: {
-    &quot;note&quot;: &quot;&#x30CE;&#x30FC;&#x30C8;&quot;
+    &quot;note&quot;: &quot;ノート&quot;
   }</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>&#x5909;&#x6570;&#x3067;&#x306E;if&#x5236;&#x5FA1;&#x3082;&#x3067;&#x304D;&#x308B;</p>
+<p>変数でのif制御もできる</p>
 </div>
 <div class="paragraph">
-<p>&#x5B9A;&#x7FA9;&#x3057;&#x305F;&#x5909;&#x6570; book.note = &#x30CE;&#x30FC;&#x30C8;</p>
+<p>定義した変数 book.note = ノート</p>
 </div>
 <div class="paragraph">
-<p>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x5909;&#x66F4;&#x65E5;&#x6642; Sun Nov 08 2020 16:35:47 GMT+0000 (Coordinated Universal Time)</p>
+<p>ファイルの変更日時 Sun Nov 15 2020 16:41:37 GMT+0000 (Coordinated Universal Time)</p>
 </div>
 </div>
 </div>
@@ -273,7 +273,7 @@
 <h2 id="_plantuml">PlantUML</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>gitbook-plugin-puml&#x306B;&#x3088;&#x308B;PlantUML&#x5BFE;&#x5FDC; &#x3053;&#x308C;&#x306B;&#x3088;&#x308A;&#x3001;&#x5FC5;&#x8981;&#x306A;&#x3089;&#x56F3;&#x89E3;&#x3067;&#x304D;&#x308B;</p>
+<p>gitbook-plugin-pumlによるPlantUML対応 これにより、必要なら図解できる</p>
 </div>
 <div class="paragraph">
 <p><img src="data:image/png;base64,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"></p>
@@ -284,7 +284,7 @@ GM-&gt;PC1 : hello<br>
 {% enduml %}</p>
 </div>
 <div class="paragraph">
-<p><strong>&#x65E5;&#x672C;&#x8A9E;&#x306F;&#x6709;&#x52B9;&#x3067;&#x306A;&#x3044;&#x69D8;&#x5B50;</strong></p>
+<p><strong>日本語は有効でない様子</strong></p>
 </div>
 </div>
 </div>
@@ -292,11 +292,11 @@ GM-&gt;PC1 : hello<br>
 <h2 id="_autocover">AutoCover</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>gitbook-plugin-autocover&#x306B;&#x3088;&#x308B;&#x8868;&#x7D19;&#x6A5F;&#x80FD;
-Windows&#x3060;&#x3068;&#x9762;&#x5012;&#x304C;&#x3042;&#x308B;&#x305F;&#x3081;&#x3001;draft&#x3067;&#x306F;&#x9664;&#x5916;</p>
+<p>gitbook-plugin-autocoverによる表紙機能
+Windowsだと面倒があるため、draftでは除外</p>
 </div>
 <div class="paragraph">
-<p>book.json&#x306B;&#x8A2D;&#x5B9A;&#x3042;&#x308A;</p>
+<p>book.jsonに設定あり</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -312,7 +312,7 @@ Windows&#x3060;&#x3068;&#x9762;&#x5012;&#x304C;&#x3042;&#x308B;&#x305F;&#x3081;&
 </div>
 </div>
 <div class="sect1">
-<h2 id="_&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;">&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;</h2>
+<h2 id="_ライセンス">ライセンス</h2>
 <div class="sectionbody">
 <div class="admonitionblock note">
 <table>
@@ -380,12 +380,56 @@ Windows&#x3060;&#x3068;&#x9762;&#x5012;&#x304C;&#x3042;&#x308B;&#x305F;&#x3081;&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"機能サンプル/Asciidoc","level":"1.3.3","depth":2,"next":{"title":"機能サンプル/Markdown","level":"1.3.4","depth":2,"path":"doc/functionsample-md.md","ref":"doc/functionsample-md.md","articles":[]},"previous":{"title":"リプレイサンプル/Markdown","level":"1.3.2","depth":2,"path":"doc/chapter2.md","ref":"doc/chapter2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["creativecommons","@tsuyoshi_cho/styles-sass","disqus","@ansanloms/uml"],"styles":{"website":"website-1604853400395.css","epub":"epub-1604853400403.css","pdf":"pdf-1604853400409.css"},"pluginsConfig":{"@ansanloms/uml":{},"disqus":{"useIdentifier":false,"shortName":"tsuyoshi-cho-gitbook"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"sepia","family":"serif","size":2},"highlight":{},"uml":{"format":"png","charset":"utf8","config":"classic"},"creativecommons":{},"@tsuyoshi_cho/styles-sass":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"TRPG EPUB Template Team/CC SA-BY 4.0","pdf":{"pageNumbers":true,"fontSize":9,"fontFamily":"IPAMincho","paperSize":"a6","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":8,"left":8,"top":26,"bottom":8},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"note":"ノート"},"title":"TRPG EPUB Template","language":"ja","gitbook":"*","description":"TRPG EPUB Template"},"file":{"path":"doc/functionsample-asciidoc.adoc","mtime":"2020-11-08T16:35:47.183Z","type":"asciidoc"},"gitbook":{"version":"3.6.8","time":"2020-11-08T16:36:39.724Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"機能サンプル/Asciidoc","level":"1.3.3","depth":2,"next":{"title":"機能サンプル/Markdown","level":"1.3.4","depth":2,"path":"doc/functionsample-md.md","ref":"doc/functionsample-md.md","articles":[]},"previous":{"title":"リプレイサンプル/Markdown","level":"1.3.2","depth":2,"path":"doc/chapter2.md","ref":"doc/chapter2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["creativecommons","@tsuyoshi_cho/styles-sass","disqus","@ansanloms/uml"],"styles":{"website":"website-1605458545917.css","epub":"epub-1605458545926.css","pdf":"pdf-1605458545932.css"},"pluginsConfig":{"@ansanloms/uml":{},"disqus":{"useIdentifier":false,"shortName":"tsuyoshi-cho-gitbook"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"sepia","family":"serif","size":2},"highlight":{},"uml":{"format":"png","charset":"utf8","config":"classic"},"creativecommons":{},"@tsuyoshi_cho/styles-sass":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"TRPG EPUB Template Team/CC SA-BY 4.0","pdf":{"pageNumbers":true,"fontSize":9,"fontFamily":"IPAMincho","paperSize":"a6","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":8,"left":8,"top":26,"bottom":8},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"note":"ノート"},"title":"TRPG EPUB Template","language":"ja","gitbook":"*","description":"TRPG EPUB Template"},"file":{"path":"doc/functionsample-asciidoc.adoc","mtime":"2020-11-15T16:41:37.358Z","type":"asciidoc"},"gitbook":{"version":"3.6.12","time":"2020-11-15T16:42:25.178Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
