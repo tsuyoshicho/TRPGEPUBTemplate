@@ -85,6 +85,7 @@
 
 <pre>
 Sample HTML Create by Tsuyoshi CHO <Tsuyoshi.CHO@Gmail.com>
+
 It is licensed under the CC BY-SA 4.0 http://creativecommons.org/licenses/by-sa/4.0/deed
 {% creativecommons type="by-sa", iconOnly="true" %}
 {% endcreativecommons %}
