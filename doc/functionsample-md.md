@@ -5,7 +5,8 @@ ___機能解説(Markdown/非推奨版)___
 
 gitbook本体機能
 なにかしら差し替えに使える、場合によってはPC名にしてもいいかも。
-book.jsonに以下のように設定
+
+book.jsonに次のように設定
 
 <pre>
   "variables": {
@@ -17,9 +18,9 @@ book.jsonに以下のように設定
 
 {% if book.note %}
 
-定義した変数 book.note = {{ book.note }}
+定義した変数:book.note = {{ book.note }}
 
-ファイルの変更日時 {{ file.mtime }}
+ファイルの変更日時:{{ file.mtime }}
 
 {% endif %}
 
@@ -64,6 +65,7 @@ book.jsonに設定あり
 
 <pre>
 Sample HTML Create by Tsuyoshi CHO <Tsuyoshi.CHO@Gmail.com>
+
 It is licensed under the CC BY-SA 4.0 http://creativecommons.org/licenses/by-sa/4.0/deed
 {% creativecommons type="by-sa", iconOnly="true" %}
 {% endcreativecommons %}
