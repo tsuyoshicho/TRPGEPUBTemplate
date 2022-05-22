@@ -18,7 +18,8 @@
     },
     "preset-ja-technical-writing": false,
     "preset-ja-spacing": {
-      "ja-no-space-between-full-width": false
+      "ja-no-space-between-full-width": false,
+      "ja-space-between-half-and-full-width": false
     },
     "general-novel-style-ja": {
       "chars_leading_paragraph": false
