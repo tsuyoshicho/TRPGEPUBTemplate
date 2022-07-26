@@ -19,13 +19,31 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Setup Calibre
+
+      - name: Setup wkhtmltopdf
         run: |
+          echo from adrg/go-wkhtmltopdf workflow
+          sudo apt-get update
+          sudo apt-get install -y xfonts-75dpi xfonts-base
+          curl --silent --show-error --location --max-redirs 3 --fail --retry 3 --output wkhtmltopdf-linux-amd64.deb https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb
+          sudo dpkg -i wkhtmltopdf-linux-amd64.deb
+          sudo ldconfig
+          rm wkhtmltopdf-linux-amd64.deb
+
+      - name: Setup calibre
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libopengl0 libegl1
           wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin install_dir=${GITHUB_WORKSPACE}/ isolated=y
           echo "${GITHUB_WORKSPACE}/calibre" >> $GITHUB_PATH
 
+      - name: Setup PlantUML
+        run: |
+          sh ./tools/plantuml_download.sh
+
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@v1
+
       - name: Build
         id: build
         run: |
@@ -38,11 +56,8 @@ jobs:
           ebook-convert --version
           echo dot
           dot -V
-          # echo wkhtmltopdf
-          # wkhtmltopdf --version
-          # echo Java and PlantUML - test dot
-          # java --version
-          # java -jar plantuml.jar -testdot
+          echo wkhtmltopdf
+          wkhtmltopdf --version
 
           echo build
           (npm run pdf  && echo "::set-output name=pdf::$(ls *.pdf)")   || true
