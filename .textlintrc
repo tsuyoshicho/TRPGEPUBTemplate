@@ -1,8 +1,7 @@
 {
   "plugins": {
-    "@textlint/markdown": {
-      "extensions": [".markdown", ".mdown", ".mkdn", ".mkd", ".md"]
-    }
+    "@textlint/markdown": true,
+    "asciidoctor": true
   },
   "rules": {
     "@proofdict/proofdict": false,
