@@ -1,7 +1,8 @@
 {
   "plugins": {
     "@textlint/markdown": true,
-    "asciidoctor": true
+    "asciidoctor": true,
+    "html": true
   },
   "rules": {
     "@proofdict/proofdict": false,
