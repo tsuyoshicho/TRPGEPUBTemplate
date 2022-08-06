@@ -40,7 +40,7 @@ GM->PC1 : hello
 </pre>
 {% endraw %}
 
-__日本語は有効でない様子__
+なお、*日本語は有効でない様子*
 
 ## AutoCover
 

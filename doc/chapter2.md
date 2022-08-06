@@ -25,11 +25,11 @@
 ### ぼうけんのはじまり
 
 <p class="dialog"><span class="name gm">ＧＭ</span><span class="separator">：</span><span class="gm phrase">発言はここ。</span></p>
-<p class="dialog"><span class="name pc1">PC1さん</span><span class="separator">：</span><span class="pc1 phrase">タグ付けは以下になります。<br />&lt;p class="dialog"&gt;...&lt;/p&gt;が最外郭になり、1つのセリフになる。</span></p>
+<p class="dialog"><span class="name pc1">PC1さん</span><span class="separator">：</span><span class="pc1 phrase">タグ付けは次になります。<br />&lt;p class="dialog"&gt;...&lt;/p&gt;が最外郭になり、1つのセリフになる。</span></p>
 <p class="dialog"><span class="name pc1">PC1さん</span><span class="separator">：</span><span class="pc1 phrase">上記の中に以下が入ります。<br />&lt;span class="name"&gt;&lt;/span&gt;<br />これが名前側。<br />ここで<br />&lt;span class="name pc1"&gt;PC1さん&lt;/span&gt;<br />のように固有の名前の部分だけクラス指定を加えて、部分定義する</span></p>
-<p class="dialog"><span class="name gm">ＧＭ</span><span class="name">/マスター</span><span class="separator">：</span><span class="gm phrase">「サブのキャラクターなどは、gm,pcXなどのクラスの対象外にする。」</span></p>
+<p class="dialog"><span class="name gm">ＧＭ</span><span class="name">/マスター</span><span class="separator">：</span><span class="gm phrase">「サブのキャラクターなどは、gm,pcXなどのクラスの対象外にする」</span></p>
 <p class="dialog"><span class="name pc2">PC2さん</span><span class="separator">：</span><span class="pc2 phrase">名前とセリフ部分の区切りには<br />&lt;span class="separator"&gt;：&lt;/span&gt;<br />などとしてください。<br /></span></p>
-<p class="dialog"><span class="name gm">ＧＭ</span><span class="name">/マスター</span><span class="separator">：</span><span class="gm phrase">「地の文は&lt;p class="body_text"&gt;としてくれ、pに限らなくていいぞ。複数をまとめてならdivを使うといいな。」</span></p>
+<p class="dialog"><span class="name gm">ＧＭ</span><span class="name">/マスター</span><span class="separator">：</span><span class="gm phrase">「地の文は&lt;p class="body_text"&gt;としてくれ、pに限らなくていいぞ。複数をまとめてならdivを使うといいな」</span></p>
 <p class="body_text">さて、マスターから依頼です。<br /></p>
 <ul class="body_text">
   <li>冒険者はいつもアレ。</li>
@@ -54,7 +54,7 @@
 ----
 
 <p class="dialog"><span class="name gm">ＧＭ</span><span class="separator">：</span><span class="gm phrase">name内のspanのクラスおよびphraseに併記するクラスは、以下を作成しています。gm,pc1...x(追加は自由に),pcall(全員)</span></p>
-<p class="dialog"><span class="name pcall">一同</span><span class="separator">：</span><span class="pcall phrase">―――(爆笑)</span></p>
+<p class="dialog"><span class="name pcall">一同</span><span class="separator">：</span><span class="pcall phrase">-――(爆笑)</span></p>
 <p class="dialog"><span class="name pc1">PC1さん</span><span class="separator">：</span><span class="pc1 phrase">だれかのセリフの続きの内容を地に記載する場合はクラス指定なしのpなどで実施します。</span></p>
 
 これで説明口調の記述をします。
@@ -77,7 +77,7 @@
 <p class="dialog"><span class="name user1">1さん</span><span class="separator">：</span><span class="user1 phrase">実際のキャラ名がきまったら、CSS(Sacss/SCSS)の定義とすりあわせておくと明確になります</span></p>
 <p class="dialog"><span class="name user2">2さん</span><span class="separator">：</span><span class="user2 phrase">あわせてアイコンとか用意するとよいでしょう</span></p>
 
-<p class="body_text">―――これにて終了</p>
+<p class="body_text">-――これにて終了</p>
 
 ----
 
@@ -90,4 +90,3 @@ It is licensed under the CC BY-SA 4.0 http://creativecommons.org/licenses/by-sa/
 {% creativecommons type="by-sa", iconOnly="true" %}
 {% endcreativecommons %}
 </pre>
-
