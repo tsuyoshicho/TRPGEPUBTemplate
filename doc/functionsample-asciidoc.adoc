@@ -37,7 +37,7 @@ GM+++->+++PC1 : hello +
 {% enduml %}
 {% endraw %}
 
-*日本語は有効でない様子*
+なお、*日本語は有効でない様子*
 
 == AutoCover
 

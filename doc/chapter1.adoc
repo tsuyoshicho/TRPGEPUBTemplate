@@ -33,7 +33,7 @@
 [name gm]#ＧＭ#
 [name]#/マスター#
 [separator]#：#
-[gm phrase]#「サブのキャラクターなどは、gm,pcXなどのクラスの対象外(nameだけ)にする。」#
+[gm phrase]#「サブのキャラクターなどは、gm,pcXなどのクラスの対象外(nameだけ)にする」#
 
 [role="dialog"]
 [name pc2]#PC2さん#
@@ -44,7 +44,7 @@
 [name gm]#ＧＭ#
 [name]#/マスター#
 [separator]#：#
-[gm phrase]#「地の文は[role="body_text"]の直後からとしてくれ、通常段落に限らなくていいぞ。ただ、各ブロックの先頭で宣言は必要になるが。」#
+[gm phrase]#「地の文は[role="body_text"]の直後からとしてくれ、通常段落に限らなくていいぞ。ただ、各ブロックの先頭で宣言は必要になるが」#
 
 [role="body_text"]
 さて、マスターから依頼です。
@@ -86,7 +86,7 @@
 [role="dialog"]
 [name pcall]#一同#
 [separator]#：#
-[pcall phrase]#―――(爆笑)#
+[pcall phrase]#――(爆笑)#
 
 [role="dialog"]
 [name pc1]#PC1さん#
@@ -123,7 +123,7 @@
 [user2 phrase]#あわせてアイコンとか用意するとよいでしょう#
 
 [role="body_text"]
-―――これにて終了
+――これにて終了
 
 '''
 
