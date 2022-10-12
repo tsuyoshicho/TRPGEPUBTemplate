@@ -24,7 +24,9 @@ jobs:
         run: |
           echo from adrg/go-wkhtmltopdf workflow
           sudo apt-get update
-          sudo apt-get install -y xfonts-75dpi xfonts-base
+          # PDF need for IPA font that use by embedding
+          sudo apt-get install -y xfonts-75dpi xfonts-base fonts-ipafont
+          fc-cache -fv
           curl --silent --show-error --location --max-redirs 3 --fail --retry 3 --output wkhtmltopdf-linux-amd64.deb https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb
           sudo dpkg -i wkhtmltopdf-linux-amd64.deb
           sudo ldconfig
