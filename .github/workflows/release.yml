@@ -44,7 +44,7 @@ jobs:
           sh ./tools/plantuml_download.sh
 
       - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@v1
+        uses: ts-graphviz/setup-graphviz@v2
 
       - name: Build
         id: build
