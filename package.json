@@ -34,7 +34,7 @@
     "@tsuyoshi_cho/honkit-plugin-styles-sass": "^3.0.0",
     "gitbook-plugin-creativecommons": "^1.0.2",
     "gitbook-plugin-disqus": "^1.0.1",
-    "honkit": "^5.0.0",
+    "honkit": "^6.0.0",
     "textlint": "^14.0.0",
     "textlint-plugin-asciidoctor": "^1.1.0",
     "textlint-plugin-html": "^1.0.0",
