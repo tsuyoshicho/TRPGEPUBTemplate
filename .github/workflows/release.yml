@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - name: Cache npm
-        uses: actions/cache@v4
+        uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf # v4
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -46,7 +46,7 @@ jobs:
           sh ./tools/plantuml_download.sh
 
       - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@v2
+        uses: ts-graphviz/setup-graphviz@b1de5da23ed0a6d14e0aeee8ed52fdd87af2363c # v2
 
       - name: Build
         id: build
@@ -72,12 +72,12 @@ jobs:
       - name: Bump version
         id: bumpr
         if: "!startsWith(github.ref, 'refs/tags/')"
-        uses: haya14busa/action-bumpr@v1
+        uses: haya14busa/action-bumpr@78ab5a104d20896c9c9122c64221b3aecf1a8cbb # v1
 
       # Update corresponding major and minor tag.
       # e.g. Update v1 and v1.2 when releasing v1.2.3
       - name: Update version
-        uses: haya14busa/action-update-semver@v1
+        uses: haya14busa/action-update-semver@fb48464b2438ae82cc78237be61afb4f461265a1 # v1
         if: "!steps.bumpr.outputs.skip"
         with:
           tag: ${{ steps.bumpr.outputs.next_version }}
@@ -85,7 +85,7 @@ jobs:
       # Get tag name.
       - name: Check tag
         id: tag
-        uses: haya14busa/action-cond@v1
+        uses: haya14busa/action-cond@94f77f7a80cd666cb3155084e428254fea4281fd # v1
         with:
           cond: "${{ startsWith(github.ref, 'refs/tags/') }}"
           if_true: ${{ github.ref }}
@@ -93,7 +93,7 @@ jobs:
 
       # Create release.
       - name: Release
-        uses: actions/create-release@v1
+        uses: actions/create-release@0cb9c9b65d5d1901c1f53e5e66eaf4afd303e70e # v1
         id: create_release
         if: "steps.tag.outputs.value != ''"
         env:
@@ -107,7 +107,7 @@ jobs:
           prerelease: false
 
       - name: Upload Release Asset PDF
-        uses: actions/upload-release-asset@v1
+        uses: actions/upload-release-asset@e8f9f06c4b078e705bd2ea027f0926603fc9b4d5 # v1
         if: steps.tag.outputs.value != '' && steps.build.outputs.pdf != ''
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -118,7 +118,7 @@ jobs:
           asset_content_type: application/pdf
 
       - name: Upload Release Asset EPUB
-        uses: actions/upload-release-asset@v1
+        uses: actions/upload-release-asset@e8f9f06c4b078e705bd2ea027f0926603fc9b4d5 # v1
         if: steps.tag.outputs.value != '' && steps.build.outputs.epub != ''
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           submodules: true
       - name: Get npm cache directory
@@ -14,21 +14,21 @@ jobs:
         run: |
           echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
       - name: Check npm cache
-        uses: actions/cache@v4
+        uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf # v4
         with:
           path: ${{ steps.npm-cache.outputs.dir }}
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Select reporter
-        uses: haya14busa/action-cond@v1
+        uses: haya14busa/action-cond@94f77f7a80cd666cb3155084e428254fea4281fd # v1
         id: reporter
         with:
           cond: ${{ github.event_name == 'pull_request' }}
           if_true: "github-pr-review"
           if_false: "github-check"
       - name: Lint textlint
-        uses: tsuyoshicho/action-textlint@v3
+        uses: tsuyoshicho/action-textlint@acab4b76cd713a83a69c4ad806ae9e837e0de009 # v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: ${{ steps.reporter.outputs.value }}
