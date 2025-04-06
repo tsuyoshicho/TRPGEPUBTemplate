@@ -105,23 +105,17 @@ jobs:
           gh release create "${TAG_NAME}" -t "Release ${TAG_NAME/refs\/tags\//}" --generate-notes --notes-start-tag "${CURRENT}"
 
       - name: Upload Release Asset PDF
-        uses: actions/upload-release-asset@e8f9f06c4b078e705bd2ea027f0926603fc9b4d5 # v1.0.2
         if: steps.tag.outputs.value != '' && steps.build.outputs.pdf != ''
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
-          asset_path: ./${{ steps.build.outputs.pdf }}
-          asset_name: ${{ steps.build.outputs.pdf }}
-          asset_content_type: application/pdf
+          FILENAME: ${{ steps.build.outputs.pdf }}
+        run: |
+          gh release upload "${TAG_NAME}" ${FILENAME}"
 
       - name: Upload Release Asset EPUB
-        uses: actions/upload-release-asset@e8f9f06c4b078e705bd2ea027f0926603fc9b4d5 # v1.0.2
         if: steps.tag.outputs.value != '' && steps.build.outputs.epub != ''
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
-          asset_path: ./${{ steps.build.outputs.epub }}
-          asset_name: ${{ steps.build.outputs.epub }}
-          asset_content_type: application/epub+zip
+          FILENAME: ${{ steps.build.outputs.epub }}
+        run: |
+          gh release upload "${TAG_NAME}" ${FILENAME}"
