@@ -107,6 +107,7 @@ jobs:
       - name: Upload Release Asset PDF
         if: steps.tag.outputs.value != '' && steps.build.outputs.pdf != ''
         env:
+          TAG_NAME: ${{ steps.tag.outputs.value }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FILENAME: ${{ steps.build.outputs.pdf }}
         run: |
@@ -115,6 +116,7 @@ jobs:
       - name: Upload Release Asset EPUB
         if: steps.tag.outputs.value != '' && steps.build.outputs.epub != ''
         env:
+          TAG_NAME: ${{ steps.tag.outputs.value }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FILENAME: ${{ steps.build.outputs.epub }}
         run: |
