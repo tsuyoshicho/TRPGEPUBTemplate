@@ -111,7 +111,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FILENAME: ${{ steps.build.outputs.pdf }}
         run: |
-          gh release upload "${TAG_NAME}" "${FILENAME}"
+          gh release upload "${TAG_NAME/refs\/tags\//}" "${FILENAME}"
 
       - name: Upload Release Asset EPUB
         if: steps.tag.outputs.value != '' && steps.build.outputs.epub != ''
@@ -120,4 +120,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FILENAME: ${{ steps.build.outputs.epub }}
         run: |
-          gh release upload "${TAG_NAME}" "${FILENAME}"
+          gh release upload "${TAG_NAME/refs\/tags\//}" "${FILENAME}"
