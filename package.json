@@ -30,7 +30,7 @@
   "devDependencies": {
     "@ansanloms/honkit-plugin-uml": "^0.0.8",
     "@proofdict/textlint-rule-proofdict": "^3.1.2",
-    "@textlint/textlint-plugin-markdown": "^14.0.0",
+    "@textlint/textlint-plugin-markdown": "^15.0.0",
     "@tsuyoshi_cho/honkit-plugin-styles-sass": "^3.0.0",
     "gitbook-plugin-creativecommons": "^1.0.2",
     "gitbook-plugin-disqus": "^1.0.1",
